@@ -1,9 +1,7 @@
 ﻿
 using TShared.Azure.ServiceBus;
+using TShared.Azure.Storage;
 
-var messageService = new MessageService();
-var sendTask = messageService.SendMessageAsync();
-var receiveTask = messageService.ReceiveMessageAsync();
-
-await Task.WhenAll(sendTask, receiveTask);
+var blobService = new BlobService();
+await blobService.RunAsync();
 Console.WriteLine("DONE");
