@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureLearning.ConsoleApp", "AzureLearning.ConsoleApp\AzureLearning.ConsoleApp.csproj", "{4ACF43A0-754E-4262-806D-13653A05945A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureLearning.ConsoleApp", "AzureLearning.ConsoleApp\AzureLearning.ConsoleApp.csproj", "{4ACF43A0-754E-4262-806D-13653A05945A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TShared", "TShared\TShared.csproj", "{77ADB2BB-6BAF-4665-A9B0-8CA963CACBD7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TShared", "TShared\TShared.csproj", "{77ADB2BB-6BAF-4665-A9B0-8CA963CACBD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureLearning.Api", "AzureLearning.Api\AzureLearning.Api.csproj", "{276AD6CC-4777-4539-9AFF-518B9C6CABAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{77ADB2BB-6BAF-4665-A9B0-8CA963CACBD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77ADB2BB-6BAF-4665-A9B0-8CA963CACBD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77ADB2BB-6BAF-4665-A9B0-8CA963CACBD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{276AD6CC-4777-4539-9AFF-518B9C6CABAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{276AD6CC-4777-4539-9AFF-518B9C6CABAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{276AD6CC-4777-4539-9AFF-518B9C6CABAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{276AD6CC-4777-4539-9AFF-518B9C6CABAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
