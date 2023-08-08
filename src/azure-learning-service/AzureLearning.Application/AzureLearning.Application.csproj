@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Handler\Balance\" />
+    <Folder Include="Handler\Roll\" />
+    <Folder Include="Handler\User\" />
+  </ItemGroup>
+
 </Project>
