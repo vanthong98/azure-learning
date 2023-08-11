@@ -1,22 +1,43 @@
-using Azure.Identity;
-using Microsoft.Extensions.Azure;
+using StackExchange.Redis.Extensions.Core;
+using StackExchange.Redis.Extensions.Core.Abstractions;
+using StackExchange.Redis.Extensions.Core.Configuration;
+using StackExchange.Redis.Extensions.Core.Implementations;
+using StackExchange.Redis.Extensions.System.Text.Json;
+using TShared;
 using TShared.Azure.Storage;
 using TShared.Azure.Storage.Abstraction;
 
 var builder = WebApplication.CreateBuilder(args);
+var services = builder.Services;
+var configuration = builder.Configuration;
 
-builder.Services.AddControllers();
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-builder.Services.AddSingleton<IAzureBlobService, AzureBlobService>();
+services.AddControllers();
+services.AddEndpointsApiExplorer();
+services.AddSwaggerGen();
+services.AddSingleton<IAzureBlobService, AzureBlobService>();
 
 const string storageUrl = "https://vanthong98.blob.core.windows.net";
 
-builder.Services.AddAzureClients(clientBuilder =>
+services.AddAzureClientServices(storageUrl);
+
+services.AddSingleton<IRedisClientFactory, RedisClientFactory>();
+services.AddSingleton<ISerializer, SystemTextJsonSerializer>();
+
+services.AddSingleton((provider) => provider
+    .GetRequiredService<IRedisClientFactory>()
+    .GetDefaultRedisClient());
+
+services.AddSingleton((provider) => provider
+    .GetRequiredService<IRedisClientFactory>()
+    .GetDefaultRedisClient()
+    .GetDefaultDatabase());
+
+var redisConfiguration = configuration.GetSection("Redis").Get<RedisConfiguration>();
+
+if (redisConfiguration != null)
 {
-    clientBuilder.AddBlobServiceClient(new Uri(storageUrl));
-    clientBuilder.UseCredential(new DefaultAzureCredential());
-});
+    services.AddSingleton(redisConfiguration);
+}
 
 var app = builder.Build();
 
