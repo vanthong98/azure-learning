@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TShared", "TShared\TShared.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureLearning.Api", "AzureLearning.Api\AzureLearning.Api.csproj", "{276AD6CC-4777-4539-9AFF-518B9C6CABAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureLearning.Application", "AzureLearning.Application\AzureLearning.Application.csproj", "{4FDE72E9-3E7E-4063-9CC9-1C3F936D69A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureLearning.Application", "AzureLearning.Application\AzureLearning.Application.csproj", "{4FDE72E9-3E7E-4063-9CC9-1C3F936D69A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureLearning.Domain", "AzureLearning.Domain\AzureLearning.Domain.csproj", "{09C6B602-CE57-4F47-A57E-1777AF83F4F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureLearning.Domain", "AzureLearning.Domain\AzureLearning.Domain.csproj", "{09C6B602-CE57-4F47-A57E-1777AF83F4F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureLearning.Function", "AzureLearning.Function\AzureLearning.Function.csproj", "{F283C345-5642-47AC-9E9F-33C995E59CCD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{09C6B602-CE57-4F47-A57E-1777AF83F4F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09C6B602-CE57-4F47-A57E-1777AF83F4F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09C6B602-CE57-4F47-A57E-1777AF83F4F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F283C345-5642-47AC-9E9F-33C995E59CCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F283C345-5642-47AC-9E9F-33C995E59CCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F283C345-5642-47AC-9E9F-33C995E59CCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F283C345-5642-47AC-9E9F-33C995E59CCD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

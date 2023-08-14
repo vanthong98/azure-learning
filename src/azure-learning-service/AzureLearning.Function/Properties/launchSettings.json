@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "AzureLearning.Function": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7263",
+      "launchBrowser": false
+    }
+  }
+}
